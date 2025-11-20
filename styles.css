@@ -64,8 +64,7 @@ main {
 }
 .ingredients, .instructions {
     line-height: 40px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+
 }
 strong {
     color: rgb(106, 103, 103);
@@ -88,6 +87,44 @@ table {
     color: hsl(14, 45%, 34%);
     font-weight: bold;
 }
+#accordion {
+    width: 80%;
+    margin: 0 auto;
+}
+#accordion #list{
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+ }
+#accordion #list label {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+#accordion #list label span {
+    transform: rotate(90deg);
+    color: #333;
+}
+#accordion label + input[type="radio"]{
+    display: none;
+}
+#accordion .ingredients,
+.instructions, .nutrition {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+#accordion label + input[type="radio"]:checked + .ingredients{
+    max-height: 500px;
+}
+#accordion label + input[type="radio"]:checked + .instructions{
+    max-height: 600px;
+}
+#accordion label + input[type="radio"]:checked + .nutrition{
+    max-height: 500px;
+}
 @media only screen and (max-width: 600px) {
     .food-img {
         width: 100%;
@@ -103,4 +140,7 @@ table {
         width: 100%;
         font-size: 14px;
     }
+    #accordion label + input[type="radio"]:checked + .instructions{
+    max-height: 1000px;
+}
 }
