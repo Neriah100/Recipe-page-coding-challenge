@@ -10,11 +10,10 @@ p {
     color: rgb(113, 110, 110);
 }
 h1  {
+    font-family: "Young+serif";
     font-size: 55px;
 }
-h1, h2 {
-    font-family:  "Young+serif";
-}
+
 h2 {
     font-size: 30px;
     color: hsl(14, 45%, 34%);
@@ -88,8 +87,7 @@ table {
     font-weight: bold;
 }
 #accordion {
-    width: 80%;
-    margin: 0 auto;
+    padding-inline-start: 0px;
 }
 #accordion #list{
     list-style: none;
@@ -106,6 +104,8 @@ table {
 #accordion #list label span {
     transform: rotate(90deg);
     color: #333;
+    font-size: 24px;
+    font-weight: 550;
 }
 #accordion label + input[type="radio"]{
     display: none;
